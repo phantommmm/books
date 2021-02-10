@@ -1,0 +1,12 @@
+
+L
+java:S1172"*Remove this unused method parameter "man".(ĞÄÚıÿÿÿÿ8¦µšı÷.
+W	java:S125"<This block of commented-out lines of code should be removed.(®ø±*8ê–ı÷.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ş´˜íüÿÿÿÿ8¦µšı÷.
+X	java:S125"<This block of commented-out lines of code should be removed.(ş½ÎÃ8¸Ş—ı÷.
+X	java:S125"<This block of commented-out lines of code should be removed.(†è¿Ü8Œ¡—ı÷.
+0
+java:S1220""Move this file to a named package.
+N
+java:S1172",Remove this unused method parameter "human".(í²¡¦ıÿÿÿÿ8ã¤ı÷.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÆÄº8ã¤ı÷.

@@ -1,0 +1,53 @@
+
+d
+java:S2142“"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ªÙñ‡ø.
+D
+java:S2189W""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8¬ÇŞ‡ø.
+H
+java:S1444"+Make this "public static count" field final(˜“ÿ±8›’‡ø.
+0
+java:S1220""Move this file to a named package.
+U	java:S106F"9Replace this use of System.out or System.err by a logger.(ºÿÎ¨8¬ÇŞ‡ø.
+L
+java:S1444"*Make this "public static full" field final(ì±©üşÿÿÿÿ8””Î‡ø.
+U	java:S106["9Replace this use of System.out or System.err by a logger.(ï‰‹·8¬ÇŞ‡ø.
+V	java:S106"9Replace this use of System.out or System.err by a logger.(ï‰‹·8¬ÇŞ‡ø.
+v
+java:S1104"TMake capacity a static final constant or non-public and provide accessors if needed.(‘‡Èıÿÿÿÿ8˜ù‡ø.
+M
+java:S1444"+Make this "public static lock2" field final(¤Ñ´»şÿÿÿÿ8””Î‡ø.
+n
+java:S1104"QMake count a static final constant or non-public and provide accessors if needed.(˜“ÿ±8›’‡ø.
+P
+java:S1444".Make this "public static capacity" field final(‘‡Èıÿÿÿÿ8˜ù‡ø.
+S
+java:S2696o"6Make the enclosing method "static" or remove this set.(×õ·ì8¹ÍÚ‡ø.
+U	java:S106p"9Replace this use of System.out or System.err by a logger.(ºÿÎ¨8¬ÇŞ‡ø.
+G
+java:S1444"*Make this "public static lock" field final(Èñˆ8ÖŒ‡ø.
+Y
+java:S2696Œ"6Make the enclosing method "static" or remove this set.(§ğİşÿÿÿÿ8ÛÍĞ‡ø.
+]	java:S125{"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8±Èı‡ø.
+D
+java:S2189l""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8¬ÇŞ‡ø.
+c
+java:S2142K"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ñ‡Šˆø.
+H
+java:S1444"+Make this "public static empty" field final(Æ—Ã‚8ğİÎ‡ø.
+s
+java:S1104"QMake lock2 a static final constant or non-public and provide accessors if needed.(¤Ñ´»şÿÿÿÿ8””Î‡ø.
+m
+java:S1104"PMake lock a static final constant or non-public and provide accessors if needed.(Èñˆ8ÖŒ‡ø.
+r
+java:S1104"PMake full a static final constant or non-public and provide accessors if needed.(ì±©üşÿÿÿÿ8””Î‡ø.
+c
+java:S2142`"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¼ÓŠˆø.
+c
+java:S2142v"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÒÖî‡ø.
+E
+java:S2189‰""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8¬ÇŞ‡ø.
+]	java:S125("<This block of commented-out lines of code should be removed.(¢„»şÿÿÿÿ8˜Áˆˆø.
+D
+java:S2189B""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8¬ÇŞ‡ø.
+n
+java:S1104"QMake empty a static final constant or non-public and provide accessors if needed.(Æ—Ã‚8ğİÎ‡ø.

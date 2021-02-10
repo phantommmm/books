@@ -104,8 +104,6 @@ int epoll_wait(int epfd, struct epoll_event *events,int maxevents, int timeout);
 
 **当fd状态改变 （不可读->可读 不可写->可写）触发fd上的回调函数ep_poll_callback被调用**
 
-
-
 **过程**
 
 （1）在使用epoll时，首先会构建epoll对象。
@@ -114,6 +112,22 @@ int epoll_wait(int epfd, struct epoll_event *events,int maxevents, int timeout);
 （4）调用epoll_wait方法时只需要检查就绪链表，如有则返回给用户程序，如没有进入等待队列。
 
 由于epoll把fd管理起来，不需要每次都重复传入，而且只返回就绪的fd，因此减少了用户空间和内核空间的相互拷贝，在fd数量庞大的时候更加高效。
+
+
+
+**redis为什么没用阻塞io模式而用了epoll**
+
+**redis kv读写是串行的，为什么epoll就能提高整体tps呢**
+
+redis kv操作基于内存，跟io没关系。redis跟io有关的是作为网络服务器。堵塞io并发需要多线程，多线程并发不了太多。非堵塞io采用一个线程就可以并发，比如轮询io是否就绪，但是效率不高，因此采用io多路复用，让epoll告诉你哪个io就绪
+
+cpu运行速度很快，1s内可以执行完大量的kv操作，所以串行没有性能问题。
+
+如果是堵塞io模式，本可以用来执行kv命令的cpu会被浪费于线程切换
+
+**io多路复用一定要配合非堵塞，才能提高并发**
+
+即当数据没完全到达时，无需等待，而是处理下一个数据，等到数据完整时再通过epoll唤醒
 
 
 

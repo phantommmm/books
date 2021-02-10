@@ -1,0 +1,14 @@
+
+b	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(º´¹ã
+]
+java:S2259["BA "NullPointerException" could be thrown; "cur1" is nullable here.(¼›®øÿÿÿÿ
+X
+java:S2259\"BA "NullPointerException" could be thrown; "cur2" is nullable here.(¿ıš›
+0
+java:S1220""Move this file to a named package.
+Y
+java:S2583O"CChange this condition so that it does not always evaluate to "true"(·êüö
+x
+java:S1488]"]Immediately return this expression instead of assigning it to the temporary variable "heads".(İÊÄ‚şÿÿÿÿ
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(–¾‘­
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(ûƒ×ıÿÿÿÿ

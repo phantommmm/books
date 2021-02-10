@@ -1,0 +1,13 @@
+
+r
+java:S11498"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(û›şöıÿÿÿÿ8á»Åàö.
+E
+java:S16599"#Declare "right" on a separate line.(¨İø¹úÿÿÿÿ8á»Åàö.
+N	java:S106"9Replace this use of System.out or System.err by a logger.(×Æáî
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ü¯ùô
+:
+java:S1659"Declare "j" on a separate line.(—äÛóøÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+M
+java:S1117w"8Rename "temp" which hides the field declared at line 14.(¿ÍE

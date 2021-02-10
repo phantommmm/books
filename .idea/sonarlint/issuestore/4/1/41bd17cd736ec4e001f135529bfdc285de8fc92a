@@ -1,0 +1,9 @@
+
+4
+java:S1659	"Declare "B" on a separate line.(¹¯‡t
+0
+java:S1220""Move this file to a named package.
+`	java:S116	"LRename this field "B" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¯‡t
+N
+java:S1128",Remove this unused import 'java.util.Stack'.(ÞÈ†üúÿÿÿÿ8àîï˜ô.
+`	java:S116	"LRename this field "A" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹¯‡t

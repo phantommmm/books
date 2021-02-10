@@ -1,0 +1,9 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ß‡¹ì8ëËÊü÷.
+-
+java:S1700"Rename field "b"(’–Ç­8íßÅü÷.
+Z	java:S106
+"9Replace this use of System.out or System.err by a logger.(Úá”óşÿÿÿÿ8íßÅü÷.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ûÉÒ8íßÅü÷.
+0
+java:S1220""Move this file to a named package.

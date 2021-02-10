@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Stack;
 
 public class sortArray {
 
@@ -48,6 +49,34 @@ public class sortArray {
             arr[k+left]=temp[k];
         }
 
+    }
+
+    //非递归
+    public void quickSort2(int[] arr){
+        Stack<Integer> stack=new Stack<>();
+        int left=0,right=arr.length-1;
+
+        if (left<right){
+            stack.push(right);
+            stack.push(left);
+
+            while (!stack.isEmpty()){
+                int i=stack.pop();
+                int j=stack.pop();
+
+                int index=randomPartition(arr,i,j);
+
+                if (index-1>i){
+                    stack.push(index-1);
+                    stack.push(i);
+                }
+                if (index+1<j){
+                    stack.push(j);
+                    stack.push(index+1);
+                }
+            }
+
+        }
     }
 
 

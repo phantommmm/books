@@ -1,0 +1,7 @@
+
+k	java:S114"QRename this interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ˆæ…Éûÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‚Ü³š
+o
+java:S1845"YRename method "a" to prevent any misunderstanding/clash with field "a" defined on line 2.(µŽŽþ

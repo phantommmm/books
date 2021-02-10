@@ -1,0 +1,40 @@
+
+[
+java:S1854¯"8Remove this useless assignment to local variable "left".(²·Âƒùÿÿÿÿ8œŠÇŒ÷.
+r	java:S117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êªòºøÿÿÿÿ8Ó½êŒ÷.
+\
+java:S1854°"9Remove this useless assignment to local variable "right".(Òû¶÷ùÿÿÿÿ8Ó½êŒ÷.
+[	java:S106»"9Replace this use of System.out or System.err by a logger.(äßõóÿÿÿÿÿ8Ó½êŒ÷.
+m	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãíî8œ÷.
+[	java:S106²"9Replace this use of System.out or System.err by a logger.(óƒ™úÿÿÿÿ8Ó½êŒ÷.
+{	java:S135­"YReduce the total number of break and continue statements in this loop to use at most one.(¬ï¥«üÿÿÿÿ8Ó½êŒ÷.
+X	java:S125"<This block of commented-out lines of code should be removed.(ıòÓ·8ø€Œ÷.
+F
+java:S1659Í"#Declare "right" on a separate line.(ç‘Š…ÿÿÿÿÿ8Ó½êŒ÷.
+U	java:S106_"9Replace this use of System.out or System.err by a logger.(©Êø8’ ÷.
+L
+java:S1481¯")Remove this unused "left" local variable.(²·Âƒùÿÿÿÿ8œŠÇŒ÷.
+]	java:S125"<This block of commented-out lines of code should be removed.(Ê¯¬ûÿÿÿÿ8ì«¾Œ÷.
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(ì­øúÿÿÿÿ8àÜ›÷.
+[	java:S106¶"9Replace this use of System.out or System.err by a logger.(ÓÑ¶ıùÿÿÿÿ8Ó½êŒ÷.
+^	java:S125¾"<This block of commented-out lines of code should be removed.(˜ÑÚüÿÿÿÿ8Ó½êŒ÷.
+E
+java:S1659Í""Declare "left" on a separate line.(ç‘Š…ÿÿÿÿÿ8Ó½êŒ÷.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Æ¤ÿéüÿÿÿÿ8»½×Œ÷.
+0
+java:S1220""Move this file to a named package.
+M
+java:S1481°"*Remove this unused "right" local variable.(Òû¶÷ùÿÿÿÿ8Ó½êŒ÷.
+N
+java:S1172"+Remove this unused method parameter "args".(üÎÆıÿÿÿÿ8Ó½êŒ÷.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ïõè¥ùÿÿÿÿ8Ÿ§”÷.
+n
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Ğº×8ëïúŒ÷.
+=
+java:S1659…"Declare "b" on a separate line.(ø™á™8Ó½êŒ÷.
+B
+java:S1659Ÿ"Declare "m" on a separate line.(†ÿøèÿÿÿÿÿ8Ó½êŒ÷.
+<
+java:S1659&"Declare "b" on a separate line.(ø™á™8ó¸÷Œ÷.
+X	java:S125Z"<This block of commented-out lines of code should be removed.(ıòÓ·8§†÷.
+X	java:S125`"<This block of commented-out lines of code should be removed.(“£›‹8Æ÷.

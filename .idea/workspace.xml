@@ -1,137 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3e80dde4-15c8-4bfc-b3e1-4e6085eb6ec6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/leetcode.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/MoreThanHalfNum_Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/SortedArraysMerge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/addTwoNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/binaryTreePaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/datastructure/ListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/datastructure/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/deleteDuplicates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/findKthLargest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/hasCycle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/isStraight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/isSymmetric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/leftSideView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/lengthOfLIS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/lengthOfLongestSubstring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/levelOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/longestCommonSubsequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/longestPalindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/majorityElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/maxLength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/maxPathSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/maxSlidingWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/maxSubArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/merge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/mergeTwoLists.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/myAtoi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/myLRUCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/numIslands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/oddEvenList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/partition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/pathSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/rand5ToRand7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/removeDuplicates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/removeNthFromEnd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/reorderList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/rightSideView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/rotateRight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/sortArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/sortList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/sortList2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/sumNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/swapPairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/threadPrint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/threeSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/trap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/validIPAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/validPalindrome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/zigzagLevelOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/DemoA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/Father.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/HuaWei.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/MyThread1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/Son.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/Thread1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bishi/Wei.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/LRUCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/MyHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/MyQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/MyStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/Singleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/Zhili.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/printThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/JUC.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/JVM.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/Java堆.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/LeetCode结构.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/Nginx.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/bei.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/git.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/heiban.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/pan.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/spring.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/spring事务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/反射.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/基本类型变量.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/异常机制.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/易忘.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/注解.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/秒杀.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/类加载器.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/线程池.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/线程池深读.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/集合.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/java/面试知识点总结by牛客.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/kefu/https.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/kefu/kefu.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/lc/leetcode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/lc/异或.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/lc/智力.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/mysql/Mysql.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/mysql/Mysql主从复制.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/mysql/SQL.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/network/TCP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/network/tcp-ip.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/network/网络.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/os/io.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/os/linux.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/os/守护进程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/os/操作系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/Redis.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/Redis主从复制.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redis.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redis主从复制.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redis事务.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redis内存模型.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redis哨兵.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redis基本.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redis持久化.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/redis/redis/Redi集群.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/rpc/Dubbo.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/rpc/Netty.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/rpc/ZAB协议.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/rpc/ZK Watch机制.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/rpc/ZK选举机制.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/rpc/toy.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notes/rpc/分布式一致性协议.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/aa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/TopK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/TreeTraverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/lowestCommonAncestor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/nextPermutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/permute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mianshi/MyBlockQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mianshi/ProducterAndConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mianshi/TestThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mianshi/ThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mianshi/ThreadTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ByteDance/addTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/addTwoNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ByteDance/findKthLargest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/findKthLargest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ByteDance/sortArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/sortArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bishi/Wei.java" beforeDir="false" afterPath="$PROJECT_DIR$/bishi/Wei.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mianshi/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/mianshi/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/java/JUC.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/JUC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/java/bei.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/bei.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/java/反射.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/反射.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/java/线程池深读.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/线程池深读.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/java/集合.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/集合.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/kefu/https.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/kefu/https.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/mysql/SQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/mysql/SQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/network/tcp-ip.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/network/tcp-ip.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/redis/redis/Redis.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/redis/redis/Redis.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/redis/redis/Redis事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/redis/redis/Redis事务.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/B.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/META-INF/leetcode.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Mainn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/MyQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/MyQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Wei.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/Wei.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/addTwoNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/addTwoNumbers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/findKthLargest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/findKthLargest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/sortArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/sortArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/B.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,9 +54,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -169,6 +81,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -233,6 +153,7 @@
     <option name="width" value="1794" />
     <option name="height" value="993" />
   </component>
+  <component name="ProjectId" id="1nDsoid3SKm9HvxmqtBbVt5BCjT" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -256,8 +177,14 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -274,49 +201,37 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.DemoA">
-    <configuration name="DemoA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DemoA" />
+  <component name="RunManager" selected="Application.permute">
+    <configuration name="ProducterAndConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ProducterAndConsumer" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortedArraysMerge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SortedArraysMerge" />
+    <configuration name="ThreadTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ThreadTest2" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="maxSlidingWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="maxSlidingWindow" />
+    <configuration name="ThreadTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ThreadTest3" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="reorderList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reorderList" />
+    <configuration name="nextPermutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="nextPermutation" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="trap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trap" />
+    <configuration name="permute" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="permute" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -324,14 +239,15 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DemoA" />
-        <item itemvalue="Application.maxSlidingWindow" />
-        <item itemvalue="Application.trap" />
-        <item itemvalue="Application.SortedArraysMerge" />
-        <item itemvalue="Application.reorderList" />
+        <item itemvalue="Application.permute" />
+        <item itemvalue="Application.nextPermutation" />
+        <item itemvalue="Application.ProducterAndConsumer" />
+        <item itemvalue="Application.ThreadTest3" />
+        <item itemvalue="Application.ThreadTest2" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -466,6 +382,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://D:/JDK8/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
