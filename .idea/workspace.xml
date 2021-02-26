@@ -5,47 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e80dde4-15c8-4bfc-b3e1-4e6085eb6ec6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ByteDance/TopK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/TreeTraverse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/lowestCommonAncestor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/nextPermutation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ByteDance/permute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/MyBlockQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/ProducterAndConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/TestThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/ThreadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mianshi/ThreadTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/C.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/combinationSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/combinationSum2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/permuteUnique.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/subsets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ByteDance/subsetsWithDup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0deb74f55430bfb91bd50edc63a7388b4d731c86" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0deb74f55430bfb91bd50edc63a7388b4d731c86" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7825a585906f2638d3cb40e2fe52044bd9fb517e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7825a585906f2638d3cb40e2fe52044bd9fb517e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/eaec7934b93373443979e16e61b17a2a5bbdbd0b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/eaec7934b93373443979e16e61b17a2a5bbdbd0b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ByteDance/addTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/addTwoNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ByteDance/findKthLargest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/findKthLargest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ByteDance/sortArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/sortArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bishi/Wei.java" beforeDir="false" afterPath="$PROJECT_DIR$/bishi/Wei.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mianshi/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/mianshi/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ByteDance/nextPermutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/nextPermutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ByteDance/permute.java" beforeDir="false" afterPath="$PROJECT_DIR$/ByteDance/permute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/java/JUC.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/JUC.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/java/bei.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/bei.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/java/反射.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/反射.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/java/线程池深读.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/线程池深读.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/java/集合.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/集合.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/java/heiban.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/java/heiban.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/kefu/https.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/kefu/https.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/mysql/SQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/mysql/SQL.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/network/tcp-ip.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/network/tcp-ip.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/redis/redis/Redis.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/redis/redis/Redis.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/redis/redis/Redis事务.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/redis/redis/Redis事务.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/B.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/B.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/META-INF/leetcode.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Mainn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/MyQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/MyQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Wei.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/Wei.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/addTwoNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/addTwoNumbers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/findKthLargest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/findKthLargest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/sortArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/sortArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/network/网络.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/network/网络.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/redis/redis/Redis持久化.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/redis/redis/Redis持久化.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/rpc/toy.md" beforeDir="false" afterPath="$PROJECT_DIR$/notes/rpc/toy.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Man.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/Man.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/Woman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/Woman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/nextPermutation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/nextPermutation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/permute.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/permute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Human.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,23 +186,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.permute">
-    <configuration name="ProducterAndConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProducterAndConsumer" />
+  <component name="RunManager" selected="Application.Human">
+    <configuration name="Human" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Human" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ThreadTest2" />
-      <module name="leetcode" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ThreadTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ThreadTest3" />
+    <configuration name="combinationSum2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="combinationSum2" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -237,13 +215,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="subsets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="subsets" />
+      <module name="leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Human" />
+        <item itemvalue="Application.combinationSum2" />
+        <item itemvalue="Application.subsets" />
         <item itemvalue="Application.permute" />
         <item itemvalue="Application.nextPermutation" />
-        <item itemvalue="Application.ProducterAndConsumer" />
-        <item itemvalue="Application.ThreadTest3" />
-        <item itemvalue="Application.ThreadTest2" />
       </list>
     </recent_temporary>
   </component>

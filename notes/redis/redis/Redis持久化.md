@@ -210,21 +210,74 @@ fsync ：同步硬盘
     
     AOF loaded anyway beacuse aof-load-truncated is enabled
 #### 缓存穿透
-     描述：访问缓存和数据库中一定不存在的数据，如ID为-1，进而对数据库造成压力
+     描述：访问缓存和数据库中一定不存在的数据，如ID为-1，进而对数据库造成压力，压垮DB
      
      解决：
      1.接口层增加校验，如用户鉴权校验，id做基础校验，id<=0的直接拦截；
      2.从缓存取不到的数据，在数据库中也没有取到，这时将他放入缓存为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反复用同一个id暴力攻击
+     3.使用布隆过滤器将所有可能存在的数据哈希到一个足够大的bitmap中，一个一定不存在的数据会被 这个bitmap拦截掉，从而避免了对底层存储系统的查询压力
 #### 缓存击穿
      描述：是指一个key非常热点，在不停的扛着大并发，大并发集中对这一个点进行访问，当这个key在失效的瞬间，持续的大并发就穿破缓存，直接请求数据库，就像在一个屏障上凿开了一个洞。 
      
      解决：
      1.设置热点key永不过期
      2.加互斥锁
-     3.布隆过滤器，它实际上是一个很长的二进制向量和一系列随机映射函数。
-       布隆过滤器可以用于检索一个元素是否在一个集合中。
-       它的优点是空间效率和查询时间都比一般的算法要好的多，缺点是有一定的误识别率和删除困难。
+**设置热点key永不过期**
+
+1.直接对key设置永不过期时间
+
+2.每次get key时检查过期时间，当快要过期的时候，通过后台异步线程重新构造key
+
+```
+
+String get(final String key) {  
+        V v = redis.get(key);  
+        String value = v.getValue();  
+        long timeout = v.getTimeout();  
+        if (v.timeout <= System.currentTimeMillis()) {  
+            // 异步更新后台异常执行  
+            threadPool.execute(new Runnable() {  
+                public void run() {  
+                    String keyMutex = "mutex:" + key;  
+                    if (redis.setnx(keyMutex, "1")) {  
+                        // 3 min timeout to avoid mutex holder crash  
+                        redis.expire(keyMutex, 3 * 60);  
+                        String dbValue = db.get(key);  
+                        redis.set(key, dbValue);  
+                        redis.delete(keyMutex);  
+                    }  
+                }  
+            });  
+        }  
+        return value;  
+}
+```
+
+**加互斥锁**
+
+```
+public String get(key) {
+      String value = redis.get(key);
+      if (value == null) { //代表缓存值过期
+          //设置3min的超时，防止del操作失败的时候，下次缓存过期一直不能load db
+		  if (redis.setnx(key_mutex, 1, 3 * 60) == 1) {  //代表设置成功
+               value = db.get(key);
+                      redis.set(key, value, expire_secs);
+                      redis.del(key_mutex);
+              } else {  //这个时候代表同时候的其他线程已经load db并回设到缓存了，这时候重试获取缓存值即可
+                      sleep(50);
+                      get(key);  //重试 一般重试一定次数后仍然失败则返回
+              }
+          } else {
+              return value;      
+          }
+ }
+```
+
+
+
 #### 缓存雪崩
+
      描述：缓存在同一时间内大量键过期（失效），接着来的一大波请求瞬间都落在了数据库中导致连接异常。
      
      解决：

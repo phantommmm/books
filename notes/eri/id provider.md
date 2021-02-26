@@ -1,3 +1,11 @@
+## 项目职责
+
+参与开发**ID生成器系统**，根据流量模型要求编写接口和实现业务逻辑满足每次分配一个段大小的值保证ID唯一性和递增性，计算消费速率提前分配段预防出现堵塞情况，通过压测保证平均时延在20ms内
+
+参与开发**用户管理平台**，提供接口和实现业务逻辑对相关**实体管理**，包括合作伙伴和应用进行增删改查功能，服务于通信服务提供商，添加单元测试和功能测试保证函数基本功能和代码健壮性
+
+## 流量模型
+
 **Traffic Model Requirement(流量模型要求)，后面的Option测试要通过这个要求**
 
 **MONTE Traffic Model Requirement**
@@ -12,6 +20,12 @@ cnSCEF MONTE Traffic module:
 Total MONTE TPS in all pods: -- 所有pods下的总流量
 
 30 * 1,000,000 * 12/10/3600=10,000TPS
+
+**即用10小时处理 30 *1,000,000 *12=30M *12流量 **
+
+**如果只用一个Pod 则需要满足10,000TPS	**
+
+
 
 **Total MONTE Config TPS for all pods in one site:**
 
@@ -289,6 +303,19 @@ DB采用一主二从使用半同步方式，保证可用性
 
 通过Cassandra给每个monte（项目）分配1000的分量存储于每个monte的本地缓存List中，monte要获取nextId时，首先查看本地缓存List,有则直接拿无才重新去Cassandra分配。
 
+```
+private final ArrayList<CachedIdentity> cachedList = new ArrayList();
+
+class CachedIdentity {
+    long currentValue;
+    long upperLimit;
+    }
+```
+
+**为什么使用List而不直接用CachedIdentity?**
+
+fetchCache方法没有加锁，可能出现并发情况，但对cachedList.add加锁了，即可以保存提前fetch的缓存
+
 注意：monter的nextId方法有加synchronized锁，而Cassandra分配nextId暂时还没有加synchronized锁，因为目前还没有很高的并发情况。
 
 **Cassandra分配nextId极端情况可能出现并发问题**
@@ -370,7 +397,10 @@ private void fillCache() {
 
                 if (needMoreId) {
                     log.debug("need more id ...");
+                    //这一步没加锁 可能出现同时fetchCached，所以使用cacheList
                     CachedIdentity item = this.fetchCachedIdentity();
+                    //这步有加锁 即并发情况则 cachedList.add（item1） cachedList.add(item2)
+                    //使用List的作用可以提前接收多fetch的cache
                     synchronized(this.cachedList) {
                         this.cachedList.add(item);
                         this.cachedList.notifyAll();
@@ -402,7 +432,7 @@ private void fillCache() {
     }
 ```
 
-**3.** 调用对应`IdGenerator.nextId ` 获取id，若缓存为空，则唤醒 `fillCache` 去请求 `id-provider`
+**3.** 调用对应`IdGenerator.nextId ` 获取id，若缓存为空，则唤醒 `fillCache` 去请求 `id-provider`，否则从`cachedList` 中拿首个元素，并且remove。
 
 ```
 public long nextId() {
@@ -446,7 +476,7 @@ public long nextId() {
 
 
 
-
+### 计算消费速率
 
 `isNeedMore`
 
@@ -476,17 +506,28 @@ count(剩余可分配数)=upperLimit(1000当前上限)-currentValue(当前值)
 
 使用metrics进行性能检查
 
+tpsMeter.getRate 计算平均速率和count比较
 
+```
+tps
+count = 4
+mean rate = 5.99 events/minute
+1-minute rate = 8.85 events/minute
+5-minute rate = 11.24 events/minute
+15-minute rate = 11.74 events/minute
+```
 
 **优化操作**
 
-如果等到monter的本地缓存用完再去访问id provider接口，id provider再去db中拿，然后再返回，此时你访问monter获取id的线程会一直堵塞直到得到结果，如果db发生网络抖动或慢查询，则会导致整个系统响应时间变慢。
+如果等到monte的本地缓存用完再去访问id provider接口，id provider再去db中拿，然后再返回，此时你访问monte获取id的线程会一直堵塞直到得到结果，如果db发生网络抖动或慢查询，则会导致整个系统响应时间变慢。
 
 因此通过计算消费速率和当前count进行比较，从而及时补充id
 
+**TPS越大 时延越大吗**
 
+1.若服务端同步处理，则随着TPS增大，时延增大，并且达到极端时服务器资源耗尽宕机
 
-
+2.若服务端异步处理，则时延与TPS关系是山谷型先上升后下降，因为异步处理会将请求存储起来慢慢处理，除非资源耗尽才会宕机
 
 `TpsMeter`
 

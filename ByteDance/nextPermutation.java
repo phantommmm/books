@@ -14,11 +14,11 @@ public class nextPermutation {
 
     public void fun(int[] nums){
         int len=nums.length;
-
         for (int i=len-1;i>0;i--){
             //从后往前遍历找到相邻的 当前大于前一个的元素
             if (nums[i]>nums[i-1]){
                 //对当前及后面进行排序 为了后面可以找到第一个大于i-1的元素
+                //sort[)
                 Arrays.sort(nums,i,len);
                 //找到第一个大于i-1的元素 swap
                 for (int j=i;j<len;j++){

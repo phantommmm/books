@@ -187,6 +187,36 @@ RPC是基于socket通信，在协议层面处于较底层，优点是传输效�
 
 HTTP处于较高层面，开发难度相对较小，可以复用HTTP工具，方便CRUD测试、允许传输xml、json等文本格式等，不用维护socket端口和数据序列化相关问题，但是传输效率比起TCP来低了一些
 
+#### 自定义序列化
+
+通过继承 `MessageToByteEncoder ` 和 `ByteToMessageDecoder ` 实现自定义序列化，然后在 `client` 和 `server` pipeline中加
+
+```
+public class CustomV2Encoder extends MessageToByteEncoder {
+    @Override
+    public void encode(ChannelHandlerContext ctx, Object in, ByteBuf out) throws Exception {
+        //使用hessian序列化对象
+        byte[] data = HessianSerializer.serialize(in);
+        //先写入消息的长度作为消息头
+        out.writeInt(data.length);
+        //最后写入消息体字节数组
+        out.writeBytes(data);
+    }
+}
+
+public class CustomV2Decoder extends ByteToMessageDecoder {
+    @Override
+    public void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
+    }
+}
+
+//配置自定义序列化解码工具
+ch.pipeline().addLast(new CustomV2Decoder());
+//配置自定义序列化编码工具
+ch.pipeline().addLast(new CustomV2Encoder());
+
+```
+
 
 
 #### 序列化方式

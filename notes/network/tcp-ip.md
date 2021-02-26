@@ -177,7 +177,7 @@ TCP首部中, 有一个16位窗口字段存放了窗口大小信息;
 
   **若一开始就发送大量数据？**
 
-#### **拥塞控制**
+#### **拥塞控制 Reno算法**
 
 拥塞窗口：可以同时发送的数量
 
@@ -372,6 +372,8 @@ heart beart适用于快速或者实时监控连接状态的机制，分布式环
 
 ### TCP连接可能出现的问题
 
+[彻底弄懂TCP协议：从三次握手说起 (qq.com)](https://mp.weixin.qq.com/s/6LiZGMt2KRiIoMaLwx-lkQ)
+
 #### 第三次握手失败了怎么办？
 
 当client与server的第三次握手失败了之后，即client发送至server的确认建立连接报文段未能到达server，server在等待client回复ACK的过程中超时了，那么server会向client发送一个RTS报文段并进入关闭状态，即：并不等待client第三次握手的ACK包重传，直接关闭连接请求，这主要是为了防止泛洪攻击，即坏人伪造许多IP向server发送连接请求，从而将server的未连接队列塞满，浪费server的资源。
@@ -548,3 +550,4 @@ Socket socket=new Socket(ip,port);
 socket.close();
 
 ```
+

@@ -43,9 +43,18 @@ Java线程的线程栈所占用的内存是在Java堆外的，所以是不受jav
 **List 转 int**
 
 ```
-Integer[] arr=new Integer[2]; //声明为Integer
-arr=list.toArray(new Integer[0]);
+List<Integer> list=new ArrayList<>();
+list.add(1);
+Integer[] arr=new Integer[1]; //声明为Integer
+arr=list.toArray(new Integer[1]);
 
 int[] arr2=new int[2];
 arr2=list2.stream().mapToInt(Integer::valueOf).toArray();
 ```
+
+**int 转 List**
+
+```
+list=Arrays.asList(arr);
+```
+

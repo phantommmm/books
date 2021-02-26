@@ -55,8 +55,12 @@ kubectl port-forward 通过端口转发映射本地端口到指定的应用端�
 
 ```
 kubectl port-forward -n cces-test --address 0.0.0.0 svc/eric-cces-common-entity 8083:8083
-kubectl port-forward -n cces-test --address 0.0.0.0 svc/eric-apigm-api-admin 8085:8085									
+kubectl port-forward -n cces-test --address 0.0.0.0 svc/eric-apigm-api-admin 8085:8085				
 ```
+
+![image-20210225155738194](C:\Users\eijinle\AppData\Roaming\Typora\typora-user-images\image-20210225155738194.png)
+
+
 
 ![img](https://img-blog.csdn.net/20180817184719684?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Vjc2hlZXA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
@@ -123,7 +127,7 @@ kubectl get pods --namespace cces-test
 kebuctl get pods eric-tm-ingress-controller-cr-envoy-tbrzm --namespace=cces-test
 //查找具体的deployment
 kubectl get deployment eric-cces-common-entity --namespace=cces-test
-
+kubectl get deployment eric-apigm-api-composition-manager --namespace=cces
 
 //查看pod结构信息
 kubectl describe pods eric-cces-common-entity-97bdb7ff4-zr4mc --namespace=cces-test
