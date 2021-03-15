@@ -104,7 +104,6 @@ iotop
 -b 批量显示
 -p PID
 
-
 列出目前所有的正在内存当中的进程
 ps axu //有进程占用CPU百分比%CPU 内存占用百分比%MEM
 ps -ef //进程占用CPU百分比C
@@ -113,10 +112,14 @@ ps -ef | grep java
 
 查看端口占用情况
 (list of file)
-lsof -i 端口号
+lsof -i 列出所有网络连接信息
+lsof -i tcp/udp 列出tcp/udp网络连接信息
+lsof -i :端口号 
+lsof -i :22查看22端口运行情况
+
+
 查看tcp udp端口和进程情况
 netstat -tunlp | grep 端口号
-
 netstat -ntlp //查看当前所有tcp端口
 netstat -ntulp | grep 80 //查看所有80端口
 ```
@@ -179,6 +182,8 @@ rates：分别表示过去 2s 10s 40s 的平均流量
 ### 查询日记
 
 ```
+-n表示带行号
+-f表示动态刷新
 tail -n 100 mysql.log 查询日记尾部100行内容
 tail -n +100 mysql.log 查询日记100行后的内容
 tail -nf 100 mysql.log 循环实时查看最后100行日记
@@ -188,7 +193,9 @@ head -n 100 mysql.log 查询日记头100行内容
 head -n -100 mysql.log 查询日记除了最后100行的内容
 
 由第一行到最后一行连续显示在屏幕上
-cat -n test.log |grep "debug"  得到关键日志的行号
+cat -n test.log |grep "debug"  查找debug内容输出到屏幕上
+tac -n test.log 反过来，从最后一行到第一行输出到屏幕上
+cat -n test1.log > test2.log 将test1的内容输出到test2里
 
 //根据日期查询 日期必须是日记中打印出来的日记
 sed -n '/2014-12-17 16:17:20/,/2014-12-17 16:17:36/p'  test.log

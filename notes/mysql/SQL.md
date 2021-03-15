@@ -8,13 +8,22 @@ id subject score stu_id
 
 ```
 创建学生表
-create table student{
+create table student(
 id int not null,
 subject varchar(255) not null,
 score int not null,
 stu_id int not null,
-primary key('id')
-};
+primary key(id)
+);
+
+插入数据
+insert into student values(1,"math",50,1);
+insert into student values(2,"pe",80,1);
+insert into student values(3,"math",90,2);
+insert into student values(4,"pe",80,2);
+insert into student values(5,"math",30,3);
+insert into student values(6,"pe",80,3);
+
 
 查询单科成绩前10的学生     默认升序即第一行成绩最低 desc降序
 select * from student order by score desc limit 10;
@@ -23,10 +32,10 @@ select * from student order by score desc limit 10;
 select * from student where subject=chinese order by score desc limit 10
 
 查询总成绩前10的学生
-select sum(score) score,stu_id from student group by sut_id order by score desc limit 10
+select sum(score) sum_score,stu_id from student group by stu_id order by sum_score desc limit 10
 
 查询平均分前三名的学生
-select stu_id, avg(score) score from student group by stu_id order by score desc limit 3
+select stu_id, avg(score) avg_score from student group by stu_id order by avg_score desc limit 3
 
 查询语文第1名的学生
 select * from student where subject=chinese order by score desc limit 1
@@ -39,8 +48,20 @@ select stu_id from student where stu_id not in(select distinct stu_id from stude
 
 select stu_id from student group by stu_id having min(score)>80
 
-查询各科最高成绩信息
-select st.id,st.subject,st.score,st.number from student st inner join (select subject,max(score) max_score from student group by subject) res on st.subject=res.subject and st.score=res.max_score;
+查询各科最高成绩分数
+select subject,max(score) max_score from student group by subject;
+
+
+查询各科最高成绩分数以及对应的学生id 同科最高成绩可能有多个
+select st.subject,st.score,st.stu_id from student st inner join (select subject,max(score) max_score from student group by subject) res on st.subject=res.subject and st.score=res.max_score;
+
+查询各科最高成绩分数以及对应的学生id 同科最高成绩只要一个就可
+select st.subject,st.score,st.stu_id from student st inner join (select subject,max(score) max_score from student group by subject) res on st.subject=res.subject and st.score=res.max_score group by st.subject;
+
+select subject,distinct stu_id from student
+会报错 distinct必须放在开头
+select distinct subject,stu_id from student
+此时distinct会共同作用与subject和stu_id，只有2个都相同才会被排除
 ```
 
  

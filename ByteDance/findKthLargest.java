@@ -8,8 +8,8 @@ public class findKthLargest {
 
     public static void main(String[] args) {
 
-        int[] nums={1,3,5,2,2};
-        int k=3;
+        int[] nums={1,3,4,2,5,7,6,9,10,8};
+        int k=7;
         findKthLargest f=new findKthLargest();
         System.out.println(f.fun(nums,k));
     }
@@ -28,7 +28,7 @@ public class findKthLargest {
             if (idx==index){
                 return nums[idx];
             }else{
-                return idx<index?quickSelect(nums,left+1,right,index):quickSelect(nums, left, right-1, index);
+                return idx<index?quickSelect(nums,idx+1,right,index):quickSelect(nums, left, idx-1, index);
             }
     }
 

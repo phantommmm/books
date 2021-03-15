@@ -158,6 +158,22 @@ join 方法是一个阻塞方法，用来进行线程之间的交流。线程 A 
 
 **5.**obj.notify()唤醒在此对象监视器上等待的单个线程，选择是**随机**的。notifyAll()唤醒在此对象监视器上等待的所有线程。
 
+**yield放弃CPU但不释放锁，那有什么用？**
+
+CPU资源和锁没有直接关系，CPU是由系统分配。
+
+yield表示当前线程通知**线程调度器**当前线程可以让出CPU，线程调度器可以响应或忽略该请求。
+
+- 线程调度器并不一定响应这个请求。
+- 响应请求时，仅仅将当前线程变为可运行状态。其他处于可运行状态的线程将竞争CPU资源，高优先级线程将会比相同优先级的线程有较高的概率获得CPU资源，但并不保证。
+
+1. 不要混淆cpu和锁，线程交出cpu并不等于一定要交出锁，这个yield只是让出cpu，让其他线程可以使用cpu，但是如果其他线程wait在该线程hold住的锁上的话，那些线程是不会被执行的，其实就是即使运行也还是继续wait。
+2. 所有就绪的线程都可以竞争，高优先级的只是概率大些，但未必一定会先执行。而且刚刚用yield让出cpu的线程也有可能被再次调度到。
+
+
+
+
+
 ![img](https://img-blog.csdn.net/20170604114223462?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamF2YXplamlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ### 线程关闭
@@ -708,3 +724,4 @@ ReentrantLock可以指定是公平锁还是非公平锁。而Synchronized只能�
  ReentrantLock提供了一个Condition类，用来实现分组唤醒需要唤醒的线程们，而Synchronized只能随机唤醒一个线程，或者唤醒全部线程。
 
  ReentrantLock提供了一种能够中断等待锁的线程的机制，通过lock.lockInterruptibly()来实现这个机制。正在等待的线程可以选择放弃等待，改为处理其他事情。
+

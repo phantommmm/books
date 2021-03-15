@@ -8,9 +8,9 @@ public class lengthOfLIS {
     public static void main(String[] args) {
         int[] arr = {10, 9, 2, 5, 3, 7, 101, 18};
         int[] ar = {0};
-        int[] a={1,2,8,6,4};
+        int[] a={1,2,8,6,4,5};
         lengthOfLIS lengthOfLIS = new lengthOfLIS();
-        System.out.println(Arrays.toString(lengthOfLIS.LIS(a)));
+        System.out.println(lengthOfLIS.fun(a));
     }
 
 
@@ -84,6 +84,7 @@ public class lengthOfLIS {
      * @return
      */
     public int fun2(int[] arr) {
+        //tails是排序好的结果
         //tails[k] 的值代表 长度为 k+1 子序列 的尾部元素值。
         int[] tails = new int[arr.length];
         int res = 0;
@@ -109,6 +110,7 @@ public class lengthOfLIS {
                 res++;
             }
         }
+        System.out.println(Arrays.toString(tails));
         return res;
     }
 }

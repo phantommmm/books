@@ -1,7 +1,7 @@
 
-N	java:S106"9Replace this use of System.out or System.err by a logger.(˜øëž
 0
 java:S1220""Move this file to a named package.
+a	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Š¹äT
+N	java:S106"9Replace this use of System.out or System.err by a logger.(˜øëž
 e
 java:S1104"OMake res a static final constant or non-public and provide accessors if needed.(è¿èý
-a	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Š¹äT

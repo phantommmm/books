@@ -40,17 +40,16 @@ ThreadLocal可以用来优雅的解决**线程间隔离的对象**，必须主�
 ThreadLocal<Integer> integerThreadLocal=new ThreadLocal<>();
 ThreadLocal<String> stringThreadLocal=new ThreadLocal<>();
 integerThreadLocal.set(1);
-integerThreadLocal.set(2);
+integerThreadLocal.set(2);//覆盖掉1的值
 stringThreadLocal.set("str");
+integerThreadLocal.get();//2
 ```
 
 线程定义几个变量，Entry[] 就有几个key
 
 --ThreadLocalMap
 
-----Entry<integerThreadLocal,1>
-
-----Entry<integerThreadLocal,2>
+----Entry<integerThreadLocal,1>  --> Entry<integerThreadLocal,2>
 
 ----Entry<stringThreadLocal,"str">
 

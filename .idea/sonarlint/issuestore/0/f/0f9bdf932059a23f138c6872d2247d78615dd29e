@@ -1,8 +1,8 @@
 
 f
 java:S11494"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ΰ·ϊΥ
+0
+java:S1220""Move this file to a named package.
 g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(µστώÿÿÿÿ
 k
 java:S11493"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(©Ύ¤¤ύÿÿÿÿ
-0
-java:S1220""Move this file to a named package.

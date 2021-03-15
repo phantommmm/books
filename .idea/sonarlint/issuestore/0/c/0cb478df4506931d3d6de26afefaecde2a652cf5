@@ -4,13 +4,13 @@ z	java:S135)"YReduce the total number of break and continue statements in this
 n
 java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(§Ì¾Èÿÿÿÿÿ8ÅÛòËû.
 Y
-java:S1854"7Remove this useless assignment to local variable "str".(©¸ÅÌûÿÿÿÿ8äø½ìû.
-J
-java:S1481"(Remove this unused "str" local variable.(©¸ÅÌûÿÿÿÿ8äø½ìû.
+java:S1854"7Remove this useless assignment to local variable "dir".(è‡İûÿÿÿÿ8»ÂµÀı.
 0
 java:S1220""Move this file to a named package.
 Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÃÄÃæüÿÿÿÿ8õÁ¤ìû.
 Y
-java:S1854"7Remove this useless assignment to local variable "dir".(è‡İûÿÿÿÿ8»ÂµÀı.
+java:S1854"7Remove this useless assignment to local variable "str".(©¸ÅÌûÿÿÿÿ8äø½ìû.
+J
+java:S1481"(Remove this unused "str" local variable.(©¸ÅÌûÿÿÿÿ8äø½ìû.
 J
 java:S1481"(Remove this unused "dir" local variable.(è‡İûÿÿÿÿ8»ÂµÀı.

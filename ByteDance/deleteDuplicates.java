@@ -28,7 +28,7 @@ public class deleteDuplicates {
                 p=p.next;
                 q=q.next;
             }else{
-                while (q!=null&&q.next!=null&&p.next.val==q.next.val){
+                while (q.next!=null&&p.next.val==q.next.val){
                     q=q.next;
                 }
                 p.next=q.next;

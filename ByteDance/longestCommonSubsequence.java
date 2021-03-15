@@ -18,15 +18,48 @@ public class longestCommonSubsequence {
     //注意！ 子字符串和数组可以相互转化 方法都一样
     public static void main(String[] args) {
         String text1="12321";
-        String text2="32147";
+        String text2="321478";
         int[] A={1,2,3,2,1};
         int[] B={3,2,1,4,7,8};
+        String strA="12321";
+        String strB="321478";
         longestCommonSubsequence longestCommonSubsequence=new longestCommonSubsequence();
-        System.out.println(longestCommonSubsequence.fun4(A,B));
-
+        //System.out.println(longestCommonSubsequence.fun(strA,strB));
+//        System.out.println(longestCommonSubsequence.fun2(strA,strB));
+//        System.out.println(longestCommonSubsequence.fun4(A,B));
+//        int[] nums={3,4,3,3};
+//        System.out.println(longestCommonSubsequence.singleNumber(nums));
+        ThreadLocal<Integer> integerThreadLocal=new ThreadLocal<>();
+        ThreadLocal<String> stringThreadLocal=new ThreadLocal<>();
+        integerThreadLocal.set(1);
+        integerThreadLocal.set(2);
+        stringThreadLocal.set("str");
+        System.out.println(integerThreadLocal.get());
     }
 
-    //最长公共子字符串 滑动窗口
+    public int singleNumber(int[] nums) {
+        if(nums.length==0||nums==null) return 0;
+        int res=0;
+        for(int i=0;i<32;i++){
+            int index=1<<i;
+            int count=0;//记录1个数
+            for(int num:nums){
+                //index只有对应位为1 其它为0
+                if((num&index)!=0){
+                    count++;
+                }
+            }
+            if(count%3==1){
+                System.out.println(res);
+                System.out.println(index);
+                System.out.println(count);
+                res|=index;
+            }
+        }
+        return res;
+    }
+
+    //最长公共子字符串/最长公共子数组 滑动窗口 (n+m)*min(n,m)
     public int fun4(int[] A,int[] B){
         int n=A.length;
         int m=B.length;

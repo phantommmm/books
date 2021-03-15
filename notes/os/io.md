@@ -6,7 +6,62 @@
 
 **NIO** 是 JDK1.4 引入的同步非阻塞 IO。服务器实现模式为多个连接请求对应一个线程，客户端连接请求会注册到一个多路复用器 Selector ，Selector 轮询到连接有 IO 请求时才启动一个线程处理。适用连接数目多且连接时间短的场景。
 
-同步是指线程还是要不断接收客户端连接并处理数据，非阻塞是指如果一个管道没有数据，不需要等待，可以轮询下一个管道。
+同步是指线程执行系统调用read/write过程仍然是同步阻塞的，非阻塞是指管理多个连接不会有连接被阻塞，如果一个管道没有数据，不需要等待，可以轮询下一个管道，如果管道有数据则调用handler工作队列去处理。
+
+**注意 一般先将serverSocketChannel注册到selector中，当触发accept事件时，在把accpet的channel再次注册到selector中**
+
+```
+
+    public static void main(String args[]) throws Exception {
+        // 打开服务端 Socket
+        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+
+        // 打开 Selector
+        Selector selector = Selector.open();
+
+        // 服务端 Socket 监听8080端口, 并配置为非阻塞模式
+        serverSocketChannel.socket().bind(new InetSocketAddress(8080));
+        serverSocketChannel.configureBlocking(false);
+
+        // 将 channel 注册到 selector 中.
+        // 通常我们都是先注册一个 OP_ACCEPT 事件, 然后在 OP_ACCEPT 到来时, 再将这个 Channel 的 OP_READ
+        // 注册到 Selector 中.
+        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+
+        while (true) {
+
+            // 获取 I/O 操作就绪的 SelectionKey, 通过 SelectionKey 可以知道哪些 Channel 的哪类 I/O 操作已经就绪.
+            Iterator<SelectionKey> keyIterator = selector.selectedKeys().iterator();
+
+            while (keyIterator.hasNext()) {
+
+                SelectionKey key = keyIterator.next();
+
+                // 当获取一个 SelectionKey 后, 就要将它删除, 表示我们已经对这个 IO 事件进行了处理.
+                keyIterator.remove();
+
+                if (key.isAcceptable()) {
+                    // 当 OP_ACCEPT 事件到来时, 我们就有从 ServerSocketChannel 中获取一个 SocketChannel,
+                    // 代表客户端的连接
+                    // 注意, 在 OP_ACCEPT 事件中, 从 key.channel() 返回的 Channel 是 ServerSocketChannel.
+                    // 而在 OP_WRITE 和 OP_READ 中, 从 key.channel() 返回的是 SocketChannel.
+                    SocketChannel clientChannel = ((ServerSocketChannel) key.channel()).accept();
+                    clientChannel.configureBlocking(false);
+                    //在 OP_ACCEPT 到来时, 再将这个 Channel 的 OP_READ 注册到 Selector 中.
+                    // 注意, 这里我们如果没有设置 OP_READ 的话, 即 interest set 仍然是 OP_CONNECT 的话, 那么 select 方法会一直直接返回.
+                    clientChannel.register(key.selector(), OP_READ, ByteBuffer.allocate(BUF_SIZE));
+                }
+
+                if (key.isReadable()) {
+                 
+                }
+
+                if (key.isValid() && key.isWritable()) {
+                 
+                }
+            }
+}
+```
 
 核心组件：
 
@@ -105,11 +160,13 @@ select/epoll会在内核里维护一个列表，每个连接的socket都会在�
 
 （1）进行select/epoll系统调用，查询可以读的连接。kernel会查询所有select的可查询socket列表，当任何一个socket中的数据准备好了，select就会返回。
 
-当用户进程调用了select，那么整个线程会被block（阻塞掉）。
+当用户线程调用了select，那么整个线程会被block（阻塞掉）。
 
 （2）用户线程获得了目标连接后，发起read系统调用，用户线程阻塞。内核开始复制数据。它就会将数据从kernel内核缓冲区，拷贝到用户缓冲区（用户内存），然后kernel返回结果。
 
 （3）用户线程才解除block的状态，用户线程终于真正读取到数据，继续执行。
+
+用户线程首先将需要进行IO操作的socket添加到select中，然后阻塞等待select系统调用返回。当数据到达时，socket被激活，select函数返回，用户线程正式发起read请求，读取数据并继续执行。
 
 **多路复用IO的特点：**
 
@@ -117,7 +174,7 @@ IO多路复用模型，建立在操作系统kernel内核能够提供的多路分
 
 和NIO模型相似，多路复用IO需要轮询。负责select/epoll查询调用的线程，需要不断的进行select/epoll轮询，查找出可以进行IO操作的连接。
 
-另外，多路复用IO模型与前面的NIO模型，是有关系的。对于每一个可以查询的socket，一般都设置成为non-blocking模型。只是这一点，对于用户程序是透明的（不感知）。
+这么一看，这种方式和同步阻塞IO并没有太大区别，甚至还多了添加监视socket以及调用select函数的额外操作，效率更差。但是使用select以后，用户可以在一个线程内同时处理多个socket的IO请求，这就是它的最大优势。用户可以注册多个socket，然后不断调用select读取被激活的socket，即可达到**同一个线程同时处理多个IO请求的目的**。而在同步阻塞模型中，必须通过多线程方式才能达到这个目的。所以IO多路复用设计目的其实**不是为了快，而是为了解决线程/进程数量过多对服务器开销造成的压力**。
 
 **多路复用IO的优点：**
 
@@ -289,3 +346,21 @@ DMA gather copy根据socket缓冲区中描述符提供的位置和偏移量信�
 在调用FileChannel.map（）时使用。 与DirectByteBuffer类似，这也是JVM堆外部的情况。 
 
 它基本上作为OS mmap（）系统调用的包装函数，以便代码直接操作映射的物理内存数据。  
+
+
+
+### IO过程消耗CPU吗
+
+不消耗。
+
+计算机硬件上**使用DMA来访问磁盘等IO**，也就是请求发出后，CPU就不再管了，直到DMA处理器完成任务，再通过中断告诉CPU完成了。
+
+所以，单独的一个IO时间，对CPU的占用是很少的，阻塞了就更不会占用CPU了，因为程序都不继续运行了，CPU时间交给其它线程和进程了。虽然IO不会占用大量的CPU时间，但是非常频繁的IO还是会非常浪费CPU时间的，所以面对大量IO的任务，有时候是需要算法来合并IO，或者通过cache来缓解IO压力的。
+
+
+
+**下载文件过程  AIO**
+
+![image-20210301114757924](C:\Users\eijinle\AppData\Roaming\Typora\typora-user-images\image-20210301114757924.png)
+
+![img](https://pic2.zhimg.com/80/v2-3a6052ede46286ffe2d00c952f817710_1440w.jpg?source=1940ef5c)

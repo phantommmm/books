@@ -1,63 +1,63 @@
 
-s
-java:S1104e"QMake lock2 a static final constant or non-public and provide accessors if needed.(¤Ñ´»şÿÿÿÿ8’ö„ø.
->
-java:S1643"Use a StringBuilder instead.(ˆ…ø™ÿÿÿÿÿ8ëÛƒ„ø.
-X
-java:S2696C"6Make the enclosing method "static" or remove this set.(äÃòúøÿÿÿÿ8‚¾’„ø.
-9
-java:S1643A"Use a StringBuilder instead.(¨š ç8¢„’„ø.
-I
-java:S1444h"'Make this "public static C" field final(ÿó…õüÿÿÿÿ8€şÍ„ø.
 n
-java:S3008g"LRename this field "B" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú×©ùÿÿÿÿ8ŸË„ø.
-“
-java:S1130j"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78ÏäÓ„ø.
-o
-java:S1104g"MMake B a static final constant or non-public and provide accessors if needed.(Ú×©ùÿÿÿÿ8ŸË„ø.
->
-java:S1643C"Use a StringBuilder instead.(äÃòúøÿÿÿÿ8¢„’„ø.
-o
-java:S1104h"MMake C a static final constant or non-public and provide accessors if needed.(ÿó…õüÿÿÿÿ8€şÍ„ø.
-l
-java:S1104c"OMake str a static final constant or non-public and provide accessors if needed.(ëäÉ¿8¡ÿÒ„ø.
-X
-java:S2696?"6Make the enclosing method "static" or remove this set.(ˆ…ø™ÿÿÿÿÿ8‚¾’„ø.
-o
-java:S1104f"MMake A a static final constant or non-public and provide accessors if needed.(øË™Ûøÿÿÿÿ8¨ğÊ„ø.
+java:S3008h"LRename this field "C" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿó…õüÿÿÿÿ8€şÍ„ø.
+0
+java:S1220""Move this file to a named package.
 G
 java:S1444d"*Make this "public static lock" field final(Èñˆ8ãß„ø.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(‹…ŞŒÿÿÿÿÿ8›…âƒø.
+]	java:S125t"<This block of commented-out lines of code should be removed.(ÿî”¿ıÿÿÿÿ8ÏäÓ„ø.
+>
+java:S1643"Use a StringBuilder instead.(äÃòúøÿÿÿÿ8ëÛƒ„ø.
+]	java:S125v"<This block of commented-out lines of code should be removed.(¼‹—´üÿÿÿÿ8ÏäÓ„ø.
 c
 java:S2142$"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8äÜ‹ƒø.
+I
+java:S1444g"'Make this "public static B" field final(Ú×©ùÿÿÿÿ8ŸË„ø.
+F
+java:S1444c")Make this "public static str" field final(ëäÉ¿8¡ÿÒ„ø.
+o
+java:S1104g"MMake B a static final constant or non-public and provide accessors if needed.(Ú×©ùÿÿÿÿ8ŸË„ø.
+n
+java:S3008f"LRename this field "A" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øË™Ûøÿÿÿÿ8¡ÿÒ„ø.
+n
+java:S3008g"LRename this field "B" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú×©ùÿÿÿÿ8ŸË„ø.
 m
 java:S1104d"PMake lock a static final constant or non-public and provide accessors if needed.(Èñˆ8ãß„ø.
 Z	java:S106:"9Replace this use of System.out or System.err by a logger.(‹…ŞŒÿÿÿÿÿ8ÊØ‘„ø.
-c
-java:S2142["FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¡ÿÒ„ø.
-I
-java:S1444g"'Make this "public static B" field final(Ú×©ùÿÿÿÿ8ŸË„ø.
-]	java:S125v"<This block of commented-out lines of code should be removed.(¼‹—´üÿÿÿÿ8ÏäÓ„ø.
-]	java:S125r"<This block of commented-out lines of code should be removed.(÷éïïúÿÿÿÿ8ÏäÓ„ø.
 M
 java:S1444e"+Make this "public static lock2" field final(¤Ñ´»şÿÿÿÿ8’ö„ø.
-0
-java:S1220""Move this file to a named package.
 9
-java:S1643"Use a StringBuilder instead.(¨š ç8ëÛƒ„ø.
->
-java:S1643"Use a StringBuilder instead.(äÃòúøÿÿÿÿ8ëÛƒ„ø.
-n
-java:S3008f"LRename this field "A" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øË™Ûøÿÿÿÿ8¡ÿÒ„ø.
->
-java:S1643?"Use a StringBuilder instead.(ˆ…ø™ÿÿÿÿÿ8¢„’„ø.
+java:S1643A"Use a StringBuilder instead.(¨š ç8¢„’„ø.
 I
 java:S1444f"'Make this "public static A" field final(øË™Ûøÿÿÿÿ8¨ğÊ„ø.
+]	java:S125r"<This block of commented-out lines of code should be removed.(÷éïïúÿÿÿÿ8ÏäÓ„ø.
+s
+java:S1104e"QMake lock2 a static final constant or non-public and provide accessors if needed.(¤Ñ´»şÿÿÿÿ8’ö„ø.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‹…ŞŒÿÿÿÿÿ8›…âƒø.
+l
+java:S1104c"OMake str a static final constant or non-public and provide accessors if needed.(ëäÉ¿8¡ÿÒ„ø.
+>
+java:S1643"Use a StringBuilder instead.(ˆ…ø™ÿÿÿÿÿ8ëÛƒ„ø.
+o
+java:S1104f"MMake A a static final constant or non-public and provide accessors if needed.(øË™Ûøÿÿÿÿ8¨ğÊ„ø.
+o
+java:S1104h"MMake C a static final constant or non-public and provide accessors if needed.(ÿó…õüÿÿÿÿ8€şÍ„ø.
+9
+java:S1643"Use a StringBuilder instead.(¨š ç8ëÛƒ„ø.
+X
+java:S2696C"6Make the enclosing method "static" or remove this set.(äÃòúøÿÿÿÿ8‚¾’„ø.
+>
+java:S1643C"Use a StringBuilder instead.(äÃòúøÿÿÿÿ8¢„’„ø.
+“
+java:S1130j"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78ÏäÓ„ø.
+>
+java:S1643?"Use a StringBuilder instead.(ˆ…ø™ÿÿÿÿÿ8¢„’„ø.
+X
+java:S2696?"6Make the enclosing method "static" or remove this set.(ˆ…ø™ÿÿÿÿÿ8‚¾’„ø.
+I
+java:S1444h"'Make this "public static C" field final(ÿó…õüÿÿÿÿ8€şÍ„ø.
+c
+java:S2142["FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¡ÿÒ„ø.
+Z	java:S106Z"9Replace this use of System.out or System.err by a logger.(Ù­ôğüÿÿÿÿ8¡ÿÒ„ø.
 S
 java:S2696A"6Make the enclosing method "static" or remove this set.(¨š ç8‚¾’„ø.
-n
-java:S3008h"LRename this field "C" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿó…õüÿÿÿÿ8€şÍ„ø.
-]	java:S125t"<This block of commented-out lines of code should be removed.(ÿî”¿ıÿÿÿÿ8ÏäÓ„ø.
-F
-java:S1444c")Make this "public static str" field final(ëäÉ¿8¡ÿÒ„ø.
-Z	java:S106Z"9Replace this use of System.out or System.err by a logger.(Ù­ôğüÿÿÿÿ8¡ÿÒ„ø.

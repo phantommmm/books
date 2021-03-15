@@ -66,7 +66,7 @@ public void updateOrder(Order order) {
 
 **2、方法不是 public的 -- 该异常一般情况都会被编译器帮忙识别**
 
-大概意思就是 `@Transactional` 只能用于 public 的方法上，否则事务不会失效，如果要用在非 public 方法上，可以开启 `AspectJ` 代理模式。
+大概意思就是 `@Transactional` 只能用于 public 的方法上，否则事务会失效，如果要用在非 public 方法上，可以开启 `AspectJ` 代理模式。
 
 **3、自身调用问题**
 

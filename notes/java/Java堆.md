@@ -43,9 +43,13 @@ JDK中使用`DirectByteBuffer`对象来表示堆外内存，每个`DirectByteBuf
 1. 把自身从`Cleaner`链表删除，从而在下次GC时能够被回收
 2. 释放堆外内存
 
+**通过虚引用删除对外内存**
+
+cleaner对象是虚引用，当发生GC时，先回收cleaner对象，并将它的包装类phantomRef虚引用放入ReferenceQueue中，在ReferenceQueue中执行clean方法释放堆外内存
+
 **`ReferenceQueue`**  作用
 
-我们希望当一个对象被GC掉的时候通知用户线程，进行额外的处理时，就需要使用引用队列了。ReferenceQueue即这样的一个对象，当一个实例OBJ被GC掉之后，其相应的包装类，即ref对象会被放入queue中。我们可以从queue中获取到相应的对象信息，同时进行额外的处理。比如反向操作，数据清理等。
+我们希望当一个对象**被GC掉**的时候通知用户线程，进行**额外的处理**时，就需要使用引用队列了。ReferenceQueue即这样的一个对象，当一个实例OBJ被GC掉之后，其相应的包装类，即ref对象会被放入queue中。我们可以从queue中获取到相应的对象信息，同时进行额外的处理。比如反向操作，数据清理等。
 
 **若一直不触发FGC内外内存就不回收了吗？**
 

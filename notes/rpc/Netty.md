@@ -482,11 +482,11 @@ Netty中的零拷贝与操作系统层面上的零拷贝不完全一样, Netty�
 
 **2.Netty**的文件传输调用transferTo方法，可以直接将文件缓冲区的数据发送到目标Channel，避免通过循环write方式导致的内存拷贝问题。
 
-**3.Netty**提供**CompositeByteBuf类**, 可以**将多个ByteBuf合并为一个逻辑上的ByteBuf**, 避免了各个ByteBuf之间的拷贝。逻辑上的拷贝。
+**3.Netty**提供**CompositeByteBuf类**, 可以**将多个ByteBuf在逻辑上合并为一个ByteBuf**, 避免了各个ByteBuf之间的拷贝。**逻辑上的拷贝**。
 
 **4**.通过**wrap**操作, 我们可以将byte[]数组、ByteBuf、ByteBuffer等包装成一个Netty ByteBuf对象, 进而避免拷贝操作。
 
-**5.ByteBuf**支持**slice**操作，可以将ByteBuf分解为多个共享同一个存储区域的ByteBuf, 避免内存的拷贝。逻辑上的拆分。
+**5.ByteBuf**支持**slice**操作，可以将ByteBuf分解为多个共享同一个存储区域的ByteBuf, 避免内存的拷贝。**逻辑上的拆分**。
 
 ### Netty责任链设计模式
 

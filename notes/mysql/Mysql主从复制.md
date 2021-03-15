@@ -1,5 +1,17 @@
 # Mysql主从复制
 
+**时机**
+
+master数据发生变化时，进行主从同步
+
+**master推还是slave拉**
+
+slave拉，根据offerset偏移量。
+
+slave的I/O thread会去向主库要求把binlog的变动发送过来
+
+因为每一个slave都是完全独立的个体，所以slave完全依据自己的节奏去处理同步，和master，其他的slave没有一点关系
+
 ## 流程
 
 (1) Master 将数据改变记录到二进制日志(binary log)中

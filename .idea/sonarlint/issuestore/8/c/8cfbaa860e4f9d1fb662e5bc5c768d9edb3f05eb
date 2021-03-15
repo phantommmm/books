@@ -1,0 +1,47 @@
+
+0
+java:S1220""Move this file to a named package.
+e	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý„Ž>
+K
+java:S1481")Remove this unused "strA" local variable.(Æ‡¢çùÿÿÿÿ8©¼¦Ž€/
+E
+java:S1481"*Remove this unused "text1" local variable.(¯ä–ˆúÿÿÿÿ
+:
+java:S1659W"Declare "k" on a separate line.(ÓÆÍÖûÿÿÿÿ
+n
+java:S1854"LRemove this useless assignment to local variable "longestCommonSubsequence".(‡¹™úÿÿÿÿ8ý¢Û€/
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(Ž³ð¸ûÿÿÿÿ8ŽòµŽ€/
+W
+java:S1854"5Remove this useless assignment to local variable "A".(Â°Ìöüÿÿÿÿ8©¼¦Ž€/
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(¸šñÙüÿÿÿÿ8ä“µŽ€/
+k	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÔÈîûÿÿÿÿ
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(éÐ«þÿÿÿÿ8 ÃµŽ€/
+Z
+java:S2589)"8Remove this expression which always evaluates to "false"(ˆâÁ‚þÿÿÿÿ8€î²Ž€/
+H
+java:S1481"&Remove this unused "A" local variable.(Â°Ìöüÿÿÿÿ8©¼¦Ž€/
+H
+java:S1481"&Remove this unused "B" local variable.(ñïüÕùÿÿÿÿ8©¼¦Ž€/
+_
+java:S1481"=Remove this unused "longestCommonSubsequence" local variable.(‡¹™úÿÿÿÿ8ý¢Û€/
+W
+java:S1854"5Remove this useless assignment to local variable "B".(ñïüÕùÿÿÿÿ8©¼¦Ž€/
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñïüÕùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â°Ìöüÿÿÿÿ
+`	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(òŽ:
+e	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ý„Ž>
+U
+java:S1854"8Remove this useless assignment to local variable "strB".(è…¿ñ8©¼¦Ž€/
+Z
+java:S1854"8Remove this useless assignment to local variable "strA".(Æ‡¢çùÿÿÿÿ8©¼¦Ž€/
+N
+java:S1854"9Remove this useless assignment to local variable "text2".(÷»ŸW
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(­¯øð8¾åŽÛ€/
+?
+java:S1481"*Remove this unused "text2" local variable.(÷»ŸW
+]	java:S125"<This block of commented-out lines of code should be removed.(‚…£ìùÿÿÿÿ8ƒŸåŒ€/
+F
+java:S1481")Remove this unused "strB" local variable.(è…¿ñ8©¼¦Ž€/
+k	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÔÈîûÿÿÿÿ
+T
+java:S1854"9Remove this useless assignment to local variable "text1".(¯ä–ˆúÿÿÿÿ
